@@ -3,8 +3,11 @@
 
 /* mixins, variables, etc. */
 
-$gray-medium-light: #eaeaea;
-$gray-medium: #ccc;
+$pinky-white: #fcebff;
+$basic_purple: #733e91;
+$opacity-purple: #410066;
+$medium_purple: #be65f2;
+$dark-purple: #261c27;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -15,12 +18,15 @@ $gray-medium: #ccc;
 /* universal */
 
 body {
-  background: url(crowd3.png) no-repeat center center fixed;
+  background: url(crowd.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   padding-top: 60px;
+  ul {
+    display: inline-block;
+  }
 }
 
 section {
@@ -42,18 +48,18 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  color: #733e91;
+  color: $opacity-purple;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -64,57 +70,44 @@ h3 {
   font-size: 2em;
 }
 
+h4 {
+  font-size: 4em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: $basic_purple;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
-  color: #261c27;
+  color: $dark-purple;
 }
 
 
 /* header */
 
 header {
-  background-color: #261c27 !important;
+  background-color: $dark-purple !important;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: white !important;
 }
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fcebff;
+  color: $pinky-white;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: $gray-medium;
+    color: $medium_purple;
     text-decoration: none;
-  }
-}
-
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
   }
 }
 
@@ -158,10 +151,11 @@ aside {
 /* forms */
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  border: 1px solid #be65f2;
   width: 100%;
   margin-bottom: 15px;
-  @include box_sizing;
+  border-color: $dark-purple !important;
+  //@include box_sizing;
 }
 
 input {
@@ -197,65 +191,6 @@ input {
   margin-left: 0;
 }
 
-/* Users index */
-
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
-}
-
-/* microposts */
-
-.microposts {
-  list-style: none;
-  padding: 0;
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
-  }
-  .content {
-    display: block;
-    margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
-  }
-  .timestamp {
-    color: $gray-light;
-    display: block;
-    margin-left: 60px;
-  }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-  }
-}
-
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
-}
-
-span.picture {
-  margin-top: 10px;
-  input {
-    border: 0;
-  }
-}
-
 /* miscellaneous */
 
 .debug_dump {
@@ -263,27 +198,57 @@ span.picture {
   float: left;
   width: 100%;
   margin-top: 45px;
+  background-color: $pinky-white;
+  opacity: 0.5;
   @include box_sizing;
 }
 
-#r_logo {
-  width: 150px;
-  margin: auto;
-}
-
-.big_box {
+.box {
   display: block;
   height: 600px;
   width: 800px;
-  background-color: #fcebff;
-  opacity: 0.7;
+  background-color: $pinky-white;
+  opacity: 0.75;
   margin: 15% auto;
   border-style: solid;
   border-width: 3px;
-  border-color: #733e91;
+  border-color: $basic_purple;
+  border-radius: 10px;
+}
+
+.stretch_box {
+  display: block;
+  width: 800px;
+  background-color: $pinky-white;
+  opacity: 0.75;
+  margin: 15% auto;
+  border-style: solid;
+  border-width: 3px;
+  border-color: $basic_purple;
   border-radius: 10px;
 }
 
 .big_container {
-  margin: 8%;
+  margin: 6.5%;
+}
+
+.left_box {
+  display: inline-block;
+  width: 50%;
+}
+
+.right_box {
+  display: inline-block;
+  float: right;
+  width: 50%;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: $basic_purple !important;
+    border-color: $dark-purple;
+}
+
+.btn-primary:hover {
+  background-color: $medium_purple !important;
+  border-color: $dark-purple;
 }
