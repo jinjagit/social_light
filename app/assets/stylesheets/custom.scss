@@ -18,7 +18,7 @@ $dark-purple: #261c27;
 /* universal */
 
 body {
-  background: url(crowd.png) no-repeat center center fixed;
+  background: image_url('crowd.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
