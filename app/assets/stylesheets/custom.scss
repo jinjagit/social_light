@@ -111,6 +111,22 @@ header {
   }
 }
 
+#name {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  margin-left: 20px;
+  font-size: 1.7em;
+  color: $medium_purple;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: $pinky-white;
+    text-decoration: none;
+  }
+}
+
 /* sidebar */
 
 aside {

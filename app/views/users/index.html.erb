@@ -1,7 +1,11 @@
 <div class="stretch_box">
   <div class="big_container">
     <div class="left_box">
-      <h1 style="float:left;margin-left:36px;">Users</h1>
+      <% if logged_in? %>
+        <h1 style="float:left;margin-left:36px;">Friends</h1>
+      <% else %>
+        <h1 style="float:left;margin-left:36px;">Users</h1>
+      <% end %>
         <ul style="list-style:none;"><h3>
           <% @users.each do |user| %>
           <li style="margin-top:2%;"><%= user.name %></li>
