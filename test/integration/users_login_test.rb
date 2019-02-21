@@ -4,6 +4,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   def setup
     @user = users(:one)
+    @other_user = users(:two)
   end
 
   test "login with invalid information" do
@@ -18,7 +19,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   test "login with valid information followed by logout" do
     get login_path
-    post login_path, params: { session: { name:    @user.name } }
+    post login_path, params: { session: { name: @user.name } }
     assert is_logged_in?
     assert_redirected_to @user
     follow_redirect!
