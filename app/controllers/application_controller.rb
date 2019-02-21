@@ -15,8 +15,6 @@ class ApplicationController < ActionController::Base
         store_location
         flash[:danger] = "Please log in."
         redirect_to login_url
-      elsif User.find(params[:id]) != current_user
-          redirect_back(fallback_location: user_path(current_user))
-      end
     end
+  end
 end

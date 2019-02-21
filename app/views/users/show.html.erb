@@ -1,9 +1,17 @@
+<div>
+  <%= button_to 'create new event', new_event_path, class: "btn btn-primary", style: "width:30%;margin:2% 35%", method: :get %>
+</div>
 <div class="left_box">
-  <h3 style="text-align:center;">Events created:</h3>
-  <% @events.each do |event| %>
-    <%= render 'event_created', event: event %>
+  <h3 style="text-align:center;">My events:</h3>
+  <h5 style="text-align:center;">pending:</h5>
+  <% @future_events.each do |event| %>
+    <%= render 'future_event', event: event %>
+  <% end %>
+  <h5 class="shadow" style="text-align:center;">expired:</h5>
+  <% @past_events.each do |event| %>
+    <%= render 'past_event', event: event %>
   <% end %>
 </div>
 <div class="right_box">
-  <h3 style="text-align:center;">Invitations received:</h3>
+  <h3 style="text-align:center;">Invitations:</h3>
 </div>
