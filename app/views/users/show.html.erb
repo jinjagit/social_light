@@ -1,2 +1,9 @@
-<h3>Events created:</h3>
-<h3>Invitations received:</h3>
+<div class="left_box">
+  <h3 style="text-align:center;">Events created:</h3>
+  <% @events.each do |event| %>
+    <%= render 'event_created', event: event %>
+  <% end %>
+</div>
+<div class="right_box">
+  <h3 style="text-align:center;">Invitations received:</h3>
+</div>

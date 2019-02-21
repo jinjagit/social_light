@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :events, class_name: 'Event', foreign_key: 'creator_id'
+
   validates :name, presence: true, length: { maximum: 24 },
             uniqueness: { case_sensitive: false }
 

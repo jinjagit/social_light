@@ -78,6 +78,11 @@ h4 {
   color: $basic_purple;
 }
 
+h5 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -257,6 +262,19 @@ input {
   display: inline-block;
   float: right;
   width: 50%;
+}
+
+.event_box {
+  display: block;
+  width: 80%;
+  background-color: $pinky-white;
+  opacity: 0.75;
+  margin: 5% auto;
+  border-style: solid;
+  border-width: 3px;
+  border-color: $basic_purple;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .btn-primary, .btn-primary:active, .btn-primary:visited {
