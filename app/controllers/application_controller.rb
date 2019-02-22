@@ -9,12 +9,13 @@ class ApplicationController < ActionController::Base
 
     # Before filters
 
-    # Confirms a logged-in user.
+    # Confirms and filters a logged-in user.
     def logged_in_user
-      if logged_in? == false
-        store_location
+      if logged_in?
+        redirect_to(user_path(@current_user)) if params[:id] != @current_user.id.to_s
+      else
         flash[:danger] = "Please log in."
         redirect_to login_url
+      end
     end
-  end
 end

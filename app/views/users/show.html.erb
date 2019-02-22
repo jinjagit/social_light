@@ -3,11 +3,11 @@
 </div>
 <div class="left_box">
   <h3 style="text-align:center;">My events:</h3>
-  <h5 style="text-align:center;">pending:</h5>
+  <h5 style="text-align:center;">future:</h5>
   <% @future_events.each do |event| %>
     <%= render 'future_event', event: event %>
   <% end %>
-  <h5 class="shadow" style="text-align:center;">expired:</h5>
+  <h5 class="shadow" style="text-align:center;">past:</h5>
   <% @past_events.each do |event| %>
     <%= render 'past_event', event: event %>
   <% end %>
