@@ -15,7 +15,7 @@ class CreateEventTest < ActionDispatch::IntegrationTest
     assert_no_difference 'Event.count' do
       post events_path, params: { event: {title: "     ", info: "info",
                                   location: "location", date: "2019-04-16",
-                                  creator_id: @user.id} }
+                                  creator_id: @user.id}, attendees: ['2', '3'] }
     end
     assert_template 'events/new'
     assert_select 'div#error_explanation'
@@ -31,7 +31,7 @@ class CreateEventTest < ActionDispatch::IntegrationTest
     assert_difference 'Event.count', 1 do
       post events_path, params: { event: {title: "title", info: "info",
                                   location: "location", date: "2019-04-16",
-                                  creator_id: @user.id} }
+                                  creator_id: @user.id}, attendees: ['2', '3'] }
     end
     assert_not flash.empty?
     assert_redirected_to @user

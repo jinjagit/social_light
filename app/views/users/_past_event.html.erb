@@ -3,4 +3,9 @@
   <h5><%= event.info %></h5>
   <h5><%= event.location %></h5>
   <h5 style="margin-bottom:15px;"><%= event.date.strftime("%A, %d %B, %Y") %></h5>
+  <hr></hr>
+  <h5 style="margin-top:-8px;">invited:</h5>
+  <% event.attendees.each do |a| %>
+    <h5><%= a.name %></h5>
+  <% end %>
 </div>
