@@ -8,7 +8,6 @@ class EventsController < ApplicationController
 
   def create
     @users = User.where.not(id: current_user.id)
-    puts "attendance_params: #{attendance_params[0..-2]}" # DEBUG
     @event = Event.new(creator_id: session[:user_id], title: event_params[:title],
                        info: event_params[:info], location: event_params[:location],
                        date: event_params[:date])
@@ -24,7 +23,6 @@ class EventsController < ApplicationController
       render 'new'
     end
   end
-
 
   private
 
