@@ -1,10 +1,11 @@
+<% provide(:title, 'My Events') %>
 <div>
-  <%= button_to 'create new event', new_event_path, class: "btn btn-primary", style: "width:30%;margin:2% 35%", method: :get %>
+  <%= button_to 'Create new event', new_event_path, class: "btn btn-primary", style: "width:30%;margin:2% 35%", method: :get %>
 </div>
 <div class="left_box">
   <h3 style="text-align:center;">My events:</h3>
   <% if @events_created_future.empty? && @events_created_past.empty? %>
-    <%= content_tag(:h5, 'No events created.', class: "shadow", style: "text-align:center;") %>
+    <%= content_tag(:h5, 'no events created.', class: "shadow", style: "text-align:center;") %>
   <% end %>
   <% unless @events_created_future.empty? %>
     <%= content_tag(:h5, 'future:', class: "shadow", style: "text-align:center;") %>
@@ -22,7 +23,7 @@
 <div class="right_box">
   <h3 style="text-align:center;">Invitations:</h3>
   <% if @events_invited_future.empty? && @events_invited_past.empty? %>
-    <%= content_tag(:h5, 'No invitations received.', class: "shadow", style: "text-align:center;") %>
+    <%= content_tag(:h5, 'no invitations received.', class: "shadow", style: "text-align:center;") %>
   <% end %>
   <% unless @events_invited_future.empty? %>
     <%= content_tag(:h5, 'future:', class: "shadow", style: "text-align:center;") %>

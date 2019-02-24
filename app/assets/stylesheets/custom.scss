@@ -86,7 +86,7 @@ h5 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
-  color: $dark-purple;
+  color: $opacity-purple;
 }
 
 
@@ -226,7 +226,7 @@ input {
 
 .box {
   display: block;
-  height: 600px;
+  min-height: 600px;
   width: 800px;
   background-color: $pinky-white;
   opacity: 0.75;
@@ -283,7 +283,7 @@ input {
 }
 
 .btn-primary:hover {
-  background-color: $medium_purple !important;
+  background-color: #9b52c4 !important;
   border-color: $dark-purple;
 }
 
@@ -320,4 +320,19 @@ hr {
   height: 30px;
   width: 85%;
   display: inline-block;
+}
+
+#from {
+  margin-top: 15px;
+  margin-bottom: -7px;
+}
+
+#p_large {
+  font-size: 1.5em;
+  margin-top: 6%;
+}
+
+#p_small {
+  font-size: 1.4em;
+  margin-top: 4%;
 }

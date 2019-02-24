@@ -1,0 +1,11 @@
+<% id = size %>
+<p id="<%=id%>">
+  <span>For demonstration purposes, all users are 'friends' with all other users. You can log in using </span>
+  <% if link_on == true %>
+    <%= link_to "any user name,", users_path %>
+  <% else %>
+  <%= content_tag(:span, 'any user name,') %>
+  <% end %>
+  <span> or create a new user. Thus, you can confirm that ONLY the users you invite to an event receive an invitation to the event by logging in as any of the users you invited (and some you didn't, to check they are not invited).</span>
+</p>
+<p style="text-align:right;">Simon Tharby, 2019</p>

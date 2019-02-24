@@ -2,19 +2,22 @@
   <div class="big_container">
     <div class="left_box">
       <% if logged_in? %>
+        <% provide(:title, 'Friends') %>
         <h1 style="float:left;margin-left:36px;">Friends</h1>
       <% else %>
+        <% provide(:title, 'Users') %>
         <h1 style="float:left;margin-left:36px;">Users</h1>
       <% end %>
         <ul style="list-style:none;"><h3>
           <% @users.each do |user| %>
-          <li style="margin-top:2%;"><%= user.name %></li>
+            <% unless user == current_user && logged_in? %>
+              <%= content_tag(:li, user.name, style: "margin-top:2%;") %>
+            <% end %>
           <% end %>
         </h3></ul>
     </div>
     <div class="right_box">
-      <p style="font-size: 1.5em;margin-top:6%;">For demonstration purposes, all users are 'friends' with all other users. You can log in as any user (just use the correct name), or create a new user. Thus, you can confirm that ONLY the users you invite to an event receive an invitation to the event by logging in as any of the users you invited (and some you didn't, to check they are not invited).</p>
-      <p style="text-align:right;">Simon Tharby, 2019</p>
+      <%= render 'shared/demo_message', size: 'p_large', link_on: false %>
     </div>
   </div>
 </div>

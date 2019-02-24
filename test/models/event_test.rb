@@ -41,6 +41,4 @@ class EventTest < ActiveSupport::TestCase
     @event.date = "     "
     assert_not @event.valid?
   end
-
-  # insert test of date not in past (after creating examples in past)
 end

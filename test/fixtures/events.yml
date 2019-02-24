@@ -5,9 +5,11 @@ one:
   info: MyString
   location: MyString
   date: 2019-02-21
+  creator_id: 1
 
 two:
   title: MyString
   info: MyString
   location: MyString
   date: 2019-02-21
+  creator_id: 1

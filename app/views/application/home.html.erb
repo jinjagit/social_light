@@ -1,3 +1,4 @@
+<% provide(:title, 'Home') %>
 <div class="box">
   <div class="big_container">
     <h1>Welcome to Social Light!</h1>
@@ -10,8 +11,7 @@
         <li style="margin-top:2%;">See what you are invited to</li>
         <li style="margin-top:2%;">View your events history</li>
       </h3></ul>
-      <p style="margin-top:2%;">For demonstration purposes, all users are 'friends' with all other users. You can log in as any user (just use the correct name), or create a new user. Thus, you can confirm that ONLY the users you invite to an event receive an invitation to the event by logging in as any of the users you invited (and some you didn't, to check they are not invited).</p>
-      <p style="text-align:right;">Simon Tharby, 2019</p>
+      <%= render 'shared/demo_message', size: 'p_small', link_on: true %>
     </div>
   </div>
 </div>

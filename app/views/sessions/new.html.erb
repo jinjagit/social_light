@@ -7,14 +7,12 @@
     <%= form_for(:session, url: login_path) do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
-
       <%= f.submit yield(:button_text), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
 <div class="stretch_box">
   <div class="big_container">
-    <p style="font-size: 1.5em;margin-top:6%;">For demonstration purposes, all users are 'friends' with all other users. You can log in as any user (just use the correct name), or create a new user. Thus, you can confirm that ONLY the users you invite to an event receive an invitation to the event by logging in as any of the users you invited (and some you didn't, to check they are not invited).</p>
-    <p style="text-align:right;">Simon Tharby, 2019</p>
+    <%= render 'shared/demo_message', size: 'p_large', link_on: true %>
   </div>
 </div>
