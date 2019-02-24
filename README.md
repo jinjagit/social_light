@@ -30,7 +30,7 @@ Example of submission of valid form contents:
 
 ![social_valid.png](app/assets/images/social_valid.png)
 
-### User show page (named 'events' as shows events related to user)
+### User show page (named 'events' as shows events related to user):
 
 The event created by the valid form submission (above) is shown for this user (as creator):
 
