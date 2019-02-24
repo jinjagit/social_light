@@ -10,7 +10,7 @@ Simon Tharby's solution to [Project 2: Private Events](https://www.theodinprojec
 
 A user can create events. A user can attend many events. An event can be attended by many users. This will require you to model many-to-many relationships and also to be very conscious about your foreign keys and class names (hint: you won’t be able to just rely on Rails’ defaults like you have before)."
 
-Note: I chose not to implement an events index page (as instructed), as i did the 'extra credit' section, implementing filters the user show page, such that a user only sees events he/she created or is invited to, and an index of all events seemed to run counter to this idea.
+Note: I chose not to implement an events index page (as instructed), as I completed the 'extra credit' section, implementing filters for the user show page so that a user only sees events he/she created or is invited to, and an index of all events seemed to run counter to this idea.
 
 ## Not a complete application:
 
