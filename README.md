@@ -1,6 +1,8 @@
 # Social Light
 
-Simon Tharby's [UNFINISHED] solution to [Project 2: Private Events](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations), Associations section, Ruby on Rails unit, Odin Project.
+Simon Tharby's solution to [Project 2: Private Events](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations), Associations section, Ruby on Rails unit, Odin Project.
+
+[View in browser](https://social-light-simontharby.herokuapp.com/)
 
 ## Instructions:
 
