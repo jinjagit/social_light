@@ -10,13 +10,13 @@ Simon Tharby's solution to [Project 2: Private Events](https://www.theodinprojec
 
 A user can create events. A user can attend many events. An event can be attended by many users. This will require you to model many-to-many relationships and also to be very conscious about your foreign keys and class names (hint: you won’t be able to just rely on Rails’ defaults like you have before)."
 
-Note: I chose not to implement an events index page (as instructed), as I completed the 'extra credit' section, implementing filters for the user show page so that a user only sees events he/she created or is invited to, and an index of all events seemed to run counter to this idea.
+Note: I chose not to implement an events index page (as instructed), as I completed the 'extra credit' section, including filters for the user show page so that a user only sees events he/she created or is invited to, and an index of all events seemed to run counter to this idea.
 
 ## Not a complete application:
 
 Since the focus of this exercise is practice in creating a through-table (Attendances) and the appropriate creation / usage of related Active Record associations (User <=> Attendance(s) <=> Event), certain actions are not implemented (User: update / delete, Event: update / delete / index, Attendance: all actions, except indirectly; show).
 
-The focus is on demonstrating the ability to create events which include a list of attendees (invited users), and the filtering of such events by date (future vs. past) when shown on the User page (named: 'events').
+The core function is the creation events which include a list of attendees (invited users), and the filtering of such events by date (future vs. past) when shown on the User page (named: 'events').
 
 To facilitate this demonstration, no real security of access is provided. Anyone can log in as any user, without need for a password, so that the full effects of event creation can be investigated from the perspective of various users (creator of event vs. invited to event vs. neither a creator of, nor invited to an event). In a similar vein, events for dates in the past can be created, so that the difference in presentation of past events vs. future events can be observed.
 
