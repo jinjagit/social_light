@@ -16,7 +16,7 @@ Note: I chose not to implement an events index page (as instructed), as I comple
 
 Since the focus of this exercise is practice in creating a through-table (Attendances) and the appropriate creation / usage of related Active Record associations (User <=> Attendance(s) <=> Event), certain actions are not implemented (User: update / delete, Event: update / delete / index, Attendance: all actions, except indirectly; show).
 
-The core function is the creation events which include a list of attendees (invited users), and the filtering of such events by date (future vs. past) when shown on the User page (named: 'events').
+The core function is the creation of events which include a list of attendees (invited users), and the filtering of such events by date (future vs. past) when shown on the User page (named: 'events').
 
 To facilitate this demonstration, no real security of access is provided. Anyone can log in as any user, without need for a password, so that the full effects of event creation can be investigated from the perspective of various users (creator of event vs. invited to event vs. neither a creator of, nor invited to an event). In a similar vein, events for dates in the past can be created, so that the difference in presentation of past events vs. future events can be observed.
 
