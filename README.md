@@ -2,7 +2,7 @@
 
 Simon Tharby's solution to [Project 2: Private Events](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations), Associations section, Ruby on Rails unit, Odin Project.
 
-[View in browser](https://social-light-simontharby.herokuapp.com/)
+[View in browser](https://social-light-simontharby.herokuapp.com/) \*The server for this app may need to initialize and this may take up to 30 seconds.
 
 ## Instructions:
 
