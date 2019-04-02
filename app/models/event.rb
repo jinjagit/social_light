@@ -10,4 +10,5 @@ class Event < ApplicationRecord
   validates :info, length: { maximum: 36 }
   validates :location, presence: true, length: { maximum: 36 }
   validates :date, presence: true
+  validates :creator_id, presence: true
 end
