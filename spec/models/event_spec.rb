@@ -43,7 +43,7 @@ RSpec.describe Event, type: :model do
     expect(event.errors[:location]).to include("is too long (maximum is 36 characters)")
   end
 
-  it "is invalid without a creator_id" do
+  it "is invalid without a creator" do
     event = Event.new(creator_id: nil)
     event.valid?
     expect(event.errors[:creator_id]).to include("can't be blank")
