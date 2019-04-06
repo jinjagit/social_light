@@ -3,7 +3,7 @@ FactoryBot.define do
     title "Example Title"
     info "Example info"
     location "Example location"
-    date Time.now
+    date 1.week.from_now
     association :creator
   end
 end

@@ -48,6 +48,14 @@ Future and past events are discriminated clearly using different background colo
 
 ![social_events.png](app/assets/images/social_events.png)
 
+## Rspec tests
+
+Note: I am aware that controller tests were 'soft deprecated' in Rails 5, but I included them here for my own practice with Rspec.
+
+Output of running all Rspec tests:
+
+![rspec-social.png](app/assets/images/rspec-social.png)
+
 ## Getting started
 
 To get started with the app, clone the repo and then install the needed gems:
@@ -65,7 +73,7 @@ $ rails db:migrate
 Finally, run the test suite to verify that everything is working correctly:
 
 ```
-$ rails test
+$ bin/rspec
 ```
 
 If the test suite passes, you'll be ready to run the app in a local server:
