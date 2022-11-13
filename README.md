@@ -2,8 +2,6 @@
 
 Simon Tharby's solution to [Project 2: Private Events](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations), Associations section, Ruby on Rails unit, Odin Project.
 
-[View in browser](https://social-light-simontharby.herokuapp.com/) \*The server for this app may need to initialize and this may take up to 30 seconds.
-
 ## Instructions:
 
 "... build a site similar to a private [Eventbrite](https://www.eventbrite.com/) which allows users to create events and then manage user signups. Users can create events and send invitations [to] parties (sound familiar?). Events take place at a specific date and at a location (which you can just store as a string, like “Andy’s House”).
